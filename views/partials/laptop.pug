@@ -1,0 +1,82 @@
+a(data-toggle='modal' data-target='#laptopModal')
+  img.laptop.interactive(src='/img/laptop.png')
+#laptopModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='laptopModalLabel' aria-hidden='true')
+  .modal-dialog.modal-xlg(role='document')
+    .modal-content
+      // .modal-header
+        // h5#laptopModalLabel.modal-title #{laptopTitle}
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      // .modal-body #{laptopText} #{laptopText2}
+      .modal-body
+        .surface
+          .mock-browser
+            .chrome-tabs(style='--tab-content-margin: 9px')
+              .chrome-tabs-content
+                .chrome-tab
+                  .chrome-tab-dividers
+                  .chrome-tab-background
+                    svg(version='1.1' xmlns='http://www.w3.org/2000/svg')
+                      defs
+                        symbol#chrome-tab-geometry-left(viewbox='0 0 214 36')
+                          path(d='M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z')
+                        symbol#chrome-tab-geometry-right(viewbox='0 0 214 36')
+                          use(xlink:href='#chrome-tab-geometry-left')
+                        clippath#crop
+                          rect.mask(width='100%' height='100%' x='0')
+                      svg(width='52%' height='100%')
+                        use.chrome-tab-geometry(xlink:href='#chrome-tab-geometry-left' width='514' height='36')
+                      g(transform='scale(-1, 1)')
+                        svg(width='52%' height='100%' x='-100%' y='0')
+                          use.chrome-tab-geometry(xlink:href='#chrome-tab-geometry-right' width='514' height='36')
+                  .chrome-tab-content
+                    .chrome-tab-favicon(style="background-image: url('/img/google-favicon.ico')")
+                    .chrome-tab-title Google
+                    .chrome-tab-drag-handle
+                    .chrome-tab-close
+                .chrome-tab(active='')
+                  .chrome-tab-dividers
+                  .chrome-tab-background
+                    svg(version='1.1' xmlns='http://www.w3.org/2000/svg')
+                      defs
+                        symbol#chrome-tab-geometry-left(viewbox='0 0 214 36')
+                          path(d='M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z')
+                        symbol#chrome-tab-geometry-right(viewbox='0 0 214 36')
+                          use(xlink:href='#chrome-tab-geometry-left')
+                        clippath#crop
+                          rect.mask(width='100%' height='100%' x='0')
+                      svg(width='52%' height='100%')
+                        use.chrome-tab-geometry(xlink:href='#chrome-tab-geometry-left' width='214' height='36')
+                      g(transform='scale(-1, 1)')
+                        svg(width='52%' height='100%' x='-100%' y='0')
+                          use.chrome-tab-geometry(xlink:href='#chrome-tab-geometry-right' width='214' height='36')
+                  .chrome-tab-content
+                    .chrome-tab-favicon(style="background-image: url('/img/facebook-favicon.ico')")
+                    .chrome-tab-title Facebook
+                    .chrome-tab-drag-handle
+                    .chrome-tab-close
+              .chrome-tabs-bottom-bar
+              // Styles to prevent flash after JS initialization
+              style.
+                .chrome-tabs .chrome-tab {
+                width: 258px
+                }
+                .chrome-tabs .chrome-tab:nth-child(1) {
+                transform: translate3d(0px, 0, 0)
+                }
+                .chrome-tabs .chrome-tab:nth-child(2) {
+                transform: translate3d(239px, 0, 0)
+                }
+            .chrome-tabs-optional-shadow-below-bottom-bar
+            .mock-browser-content
+              img(src='/img/inbox-bg.png').inbox-bg
+              div.draft-email
+                .draft-email-header
+                .draft-email-input To 
+                  span.draft-email-to #{laptopTo} &#10005;
+                .draft-email-input.black #{laptopSubject}
+                .draft-email-body.black
+                  p!= laptopText
+                img(src='/img/email-footer.png').email-footer
+        script(src='https://unpkg.com/draggabilly@2.2.0/dist/draggabilly.pkgd.min.js')
+        script(src='/js/chrome-tabs.js')

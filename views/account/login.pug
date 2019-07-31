@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='theme-color' content='#4DA5F4')
+    meta(name='csrf-token', content=_csrf)
+    title #{title} - Hackathon Starter
+    link(rel='shortcut icon', href='/favicon.png')
+    link(href='https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i|Hammersmith+One&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='/css/main.css')
+    block head
+
+  body
+
+    .container
+      include ../partials/flash
+      div.invitation-box
+        .pb-2.mt-2.mb-4
+          .header-2 Sign in
+        form(method='POST')
+          input(type='hidden', name='_csrf', value=_csrf)
+          .form-group.row
+            label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Name
+            .col-md-7
+              input.form-control(type='email', name='email', id='email', placeholder='Name', autofocus, autocomplete='email', required)
+          .form-group.row
+            label.col-md-3.col-form-label.font-weight-bold.text-right(for='password') Password
+            .col-md-7
+              input.form-control(type='password', name='password', id='password', placeholder='Password', autocomplete='current-password', required)
+          .form-group
+            .offset-md-3.col-md-7.pl-2
+              button.generic-btn.col-md-3.btn(type='submit') Login
+      div.background-script Retirement 
+        .large Gala
+      div.left-side-2 in the midst of life,
+      div.right-side we are in death
+
+
+    include ../partials/footer
+
+    script(src='/js/lib/jquery.min.js')
+    script(src='/js/lib/popper.min.js')
+    script(src='/js/lib/bootstrap.min.js')
+    script(src='/js/main.js')
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXX-X', 'auto');
+      ga('send', 'pageview');
+
+
+

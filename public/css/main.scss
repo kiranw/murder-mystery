@@ -1,0 +1,771 @@
+@import "themes/default/variables";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/@ladjs/bootstrap-social/bootstrap-social.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+
+@import "themes/default/default";
+
+@font-face {
+  font-family: "franklin-italic-300";
+  src: url(../fonts/franklin-italic-300.ttf);
+}
+
+@font-face {
+  font-family: "franklin-italic-800";
+  src: url(../fonts/franklin-italic-800.ttf);
+}
+
+@font-face {
+  font-family: "franklin-normal-300";
+  src: url(../fonts/franklin-normal-300.ttf);
+}
+
+@font-face {
+  font-family: "franklin-normal-800";
+  src: url(../fonts/franklin-normal-800.ttf);
+}
+
+@font-face {
+  font-family: "Superclarendon-Bold";
+  src: url(../fonts/Superclarendon-Bold.otf);
+}
+
+@font-face {
+  font-family: "Superclarendon-Regular";
+  src: url(../fonts/Superclarendon-Regular.otf);
+}
+
+@font-face {
+  font-family: "Superclarendon-Light";
+  src: url(../fonts/Superclarendon-Light.otf);
+}
+
+@font-face {
+  font-family: "Superclarendon-BlackItalic";
+  src: url(../fonts/Superclarendon-BlackItalic.otf);
+}
+
+@font-face {
+  font-family: "Superclarendon-BoldItalic";
+  src: url(../fonts/Superclarendon-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "Superclarendon-Italic";
+  src: url(../fonts/Superclarendon-Italic.otf);
+}
+
+@font-face {
+  font-family: "Superclarendon-LightItalic";
+  src: url(../fonts/Superclarendon-LightItalic.otf);
+}
+
+@font-face {
+  font-family: "hoffm";
+  src: url(../fonts/hoffm.ttf);
+}
+
+@font-face {
+  font-family: "Octavio";
+  src: url(../fonts/Octavio.ttf);
+}
+
+@font-face {
+  font-family: "Snake";
+  src: url(../fonts/Snake.ttf);
+}
+
+@font-face {
+  font-family: "Victor";
+  src: url(../fonts/Victor.ttf);
+}
+
+
+
+
+
+// Scaffolding
+// -------------------------
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 80px;
+  margin-bottom: 75px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+
+  p, ul {
+    margin-bottom: 0;
+  }
+}
+
+// Input Fields
+// -------------------------
+
+textarea {
+  resize: vertical;
+}
+
+// Navbar
+// -------------------------
+
+.navbar-nav img {
+  width: 30px;
+  min-height: 30px;
+  margin: -15px 15px -15px;
+}
+
+.navbar{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.navbar-brand{
+  font-size: 18px;
+  float: left;
+}
+
+.navbar-toggler {
+  position: relative;
+  float: right;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.navbar-toggler-icon {
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  left: initial;
+  right: 0;
+}
+
+/*
+* Solves Bootstrap 4 issue
+* https://github.com/twbs/bootstrap/issues/25654
+*/
+/* Styles in sm disposition and up */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Solves bs4 bug */
+  .navbar-expand-md > .container,
+  .navbar-expand-lg > .container,
+  .navbar-expand-xl > .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Styles in md disposition and up */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Solves bs4 bug */
+  .navbar-expand-lg > .container,
+  .navbar-expand-xl > .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Styles in lg disposition and up */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Solves bs4 bug */
+  .navbar-expand-xl > .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+// Alerts
+// -------------------------
+
+.alert {
+  margin-top: 20px;
+}
+
+// Thumbnails
+// -------------------------
+
+.thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+}
+
+// Font Icons
+// -------------------------
+
+.fa {
+  margin-right: 6px;
+}
+
+.fab {
+  margin-right: 6px;
+}
+
+.fas {
+  margin-right: 6px;
+}
+
+.far {
+  margin-right: 6px;
+}
+
+// Basic Snapchat Button CSS
+.btn-snapchat {
+  background-color: #fffc00;
+  color: #000 !important;
+
+  &:hover, &:active {
+    background-color: #f1ef00;
+  }
+}
+
+
+
+body {
+  font-family: "Hammersmith One";
+  background-color: rgb(25,27,33);
+  color: #f6f5ea;
+}
+
+.nav-link {
+  color: #d82d55;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  margin: 10px;
+}
+
+.nav-link-static {
+}
+
+.nav-link:hover {
+  color: #fb5179;
+}
+
+.login-btn {
+  drop-shadow: none;
+  background-color: transparent;
+  border: 2px #f6f5ea solid;
+  color: #f6f5ea;
+  margin: 0 auto;
+  display: table;
+  margin-top: 2em;
+}
+
+.generic-btn {
+  drop-shadow: none;
+  background-color: transparent;
+  border: 2px #f6f5ea solid;
+  color: #f6f5ea;
+  display: table;
+  margin-top: 2em;
+}
+
+.generic-btn:hover, .login-btn:hover {
+  background-color: #d82d55;
+  color: #f6f5ea;
+}
+
+
+.header-0 {
+  font-family: "EB Garamond";
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.3em;  
+  margin-bottom: 1em;
+}
+
+.header-1 {
+  font-family: "Hammersmith One";
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2.3em;
+}
+
+.header-2 {
+  font-family: "Hammersmith One";
+  text-align: center;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-size: 2.1em;
+  font-style: italic;
+}
+
+.header-3 {
+  font-family: "Hammersmith One";
+  text-align: center;
+  font-weight: 300;
+  font-size: 4em;
+}
+
+.header-4 {
+  font-family: "EB Garamond";
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.3em;  
+  margin-bottom: 1em;
+}
+
+
+.navbar {
+  background-color: transparent;
+  drop-shadow: none;
+  box-shadow: none;
+  color: #f6f5ea !important;
+  font-family: "Hammersmith One";
+}
+
+footer {
+  font-weight: 300;
+  font-family: "EB Garamond";
+}
+
+input {
+  background-color: rgb(25,27,33) !important;
+  color: #f6f5ea !important;
+  border: none !important;
+  border-bottom: 1px solid #f6f5ea !important;
+}
+
+.background-script {
+  font-family: "EB Garamond";
+  text-align: right;
+  font-style: italic;
+  font-size: 24em;
+  line-height: 60%;
+  z-index: -10;
+  position: fixed;
+  bottom: 3%;
+  right: 0%;
+  opacity: 0.05;
+  letter-spacing: -10px;
+}
+
+.large {
+  font-size: 1.3em;
+}
+
+.left-side, .left-side-2 {
+  text-orientation: sideways; 
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1em;
+  position: absolute;
+  height: 5vw;
+  width: 80vh;
+  margin-top: -5vw;
+  margin-left: -5vw;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+.left-side-2{
+  margin-top: 10vw;
+}
+
+.right-side {
+  text-orientation: sideways; 
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1em;
+  position: absolute;
+  height: 5vw;
+  width: 100vh;
+  right: -95vh;
+  top: 5vw;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.invitation-box {
+  border: 3px solid #f6f5ea;
+  padding: 3vw;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+
+.desk-background {
+   background-image: url("../img/desk-2.jpg");
+   z-index: -100;
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+}
+
+
+.laptop {
+  width: 50vw;
+  height: auto;
+  transform: rotate(30deg);
+  position: fixed;
+  right: -5vw;
+  top: -3vh;
+}
+
+.laptop:hover {
+  top: -5vh;
+}
+
+.phone {
+  width: 15vw;
+  height: auto;
+  transform: rotate(30deg);
+  position: fixed;
+  right: 8vw;
+  top: 10vh;
+}
+
+.phone:hover {
+  top: 8vh;
+}
+
+
+.invitation {
+  width: 40vw;
+  height: auto;
+  transform: rotate(-30deg);
+  position: fixed;
+  left: -5vw;
+  top: -4vh;
+}
+
+.invitation:hover {
+  top: -6vh;
+}
+
+
+
+.guest-list {
+  width: 20vw;
+  height: auto;
+  transform: rotate(-10deg);
+  position: fixed;
+  left: 25vw;
+  top: 0vh;
+}
+
+.guest-list:hover {
+  top: -2vh;
+}
+
+.newspaper {
+  width: 45vw;
+  height: auto;
+  transform: rotate(-10deg);
+  position: fixed;
+  left: 10vw;
+  top: 45vh;
+}
+
+.newspaper:hover {
+  top: 43vh;
+}
+
+.diary {
+  width: 27vw;
+  height: auto;
+  transform: rotate(25deg);
+  position: fixed;
+  right: 2vw;
+  top: 20vh;
+}
+
+.diary:hover{
+  top: 18vh;
+}
+
+.folder {
+  width: 37vw;
+  height: auto;
+  transform: rotate(200deg);
+  position: fixed;
+  right: 5vw;
+  top: 10vh;
+}
+
+.folder:hover{
+  top: 8vh;
+}
+
+
+.interactive {
+  -webkit-transition: top 0.5s; /* Safari prior 6.1 */
+  transition: top 0.5s;
+}
+
+.interactive:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+
+footer a {
+  color: #f6f5ea;
+}
+
+footer a:hover {
+  color: #d82d55;
+}
+
+.modal {
+  color: rgb(25,27,33);
+  font-family: "Hammersmith One" !important;
+}
+
+.modal-title {
+  color: rgb(25,27,33);
+  font-family: "Hammersmith One" !important;
+}
+
+audio, audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+  font-family: "Hammersmith One" !important;
+  color: rgb(25,27,33);
+}
+
+/*audio::-webkit-media-controls-panel {}
+
+audio::-webkit-media-controls-mute-button {}
+
+audio::-webkit-media-controls-play-button {}
+
+audio::-webkit-media-controls-timeline-container {}
+
+audio::-webkit-media-controls-current-time-display {}
+
+audio::-webkit-media-controls-time-remaining-display {}
+
+audio::-webkit-media-controls-timeline {}
+
+audio::-webkit-media-controls-volume-slider-container {}
+
+audio::-webkit-media-controls-volume-slider {}
+
+audio::-webkit-media-controls-seek-back-button {}
+
+audio::-webkit-media-controls-seek-forward-button {}
+
+audio::-webkit-media-controls-fullscreen-button {}
+
+audio::-webkit-media-controls-rewind-button {}
+
+audio::-webkit-media-controls-return-to-realtime-button {}
+
+audio::-webkit-media-controls-toggle-closed-captions-button {}*/
+
+
+.op-ed {
+  font-family: "franklin-normal-800";
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5;
+  color: lightblue;
+  margin-bottom: 1vh;
+}
+
+.date {
+  font-family: "franklin-normal-300";
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+}
+
+.newspaper-title {
+  font-family: "Superclarendon-Bold";
+  transform: scale(.9, 1);
+  font-size: 3.8em !important;
+  letter-spacing: -2px;
+  margin-bottom: -3vh;
+  margin-left: -3vw;
+}
+
+.newspaper-author-name {
+  font-family: "franklin-normal-800";
+}
+
+.newspaper-author {
+  font-family: "franklin-normal-300";
+  font-size: 1.3em;
+  margin-bottom: 4vh;
+}
+
+.newspaper-text {
+  font-family: "EB Garamond";
+  margin-bottom: 3vh;
+  font-size: 1.1em;
+}
+
+.newspaper-article-title {
+  font-family: "Superclarendon-BlackItalic";
+  transform: scale(.9, 1);
+  margin-left: -3vw;
+  margin-bottom: -1vh;
+  font-size: 2.3em;
+  letter-spacing: -2px;
+}
+
+.modal-lg {
+    max-width: 65% !important;
+    padding: 3vw;
+    color: rgb(25,27,33);
+}
+
+.modal-xlg {
+    max-width: 85% !important;
+    padding: 2vw;
+    color: rgb(25,27,33);
+}
+
+.modal-body, .modal-header {
+    background-color: #f2f2f2;
+    color: rgb(25,27,33);
+}
+
+#diaryModal .modal-body, #diaryModal .modal-header, #diaryModal .modal-title {
+  font-family: "hoffm" !important;
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+.diary-date {
+  margin-bottom: 2em;
+  font-weight: 800;
+  font-size: 0.8em;
+}
+
+
+@media (min-width: 500px) {
+  .surface {
+      padding: 0px;
+  }
+}
+
+.surface {
+  padding: 0px !important;
+}
+
+#laptopModal .modal-body {
+  padding: 0px;
+  border-radius: 15px;
+}
+
+.mock-browser-content {
+  min-height: 650px;
+  padding: 0px !important;
+}
+
+@media (min-width: 800px) {
+  .mock-browser-content {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      padding: 0px !important; 
+      margin-top: -1px;
+  }
+}
+
+.inbox-bg {
+  width: 100%;
+  height: auto;
+  z-index: -5;
+  position: absolute;
+}
+
+.chrome-tabs .chrome-tab {
+  width: 258px;
+}
+.chrome-tabs .chrome-tab:nth-child(1) {
+  transform: translate3d(0px, 0, 0)
+}
+.chrome-tabs .chrome-tab:nth-child(2) {
+  transform: translate3d(239px, 0, 0)
+}
+
+
+.draft-email {
+  width: 40%;
+  position: absolute;
+  z-index:100;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  font-size: 0.9em;
+  color: rgba(0,0,0,0.3);
+  font-family: "franklin-normal-300";
+  box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+}
+
+.draft-email-header {
+  height: 2em;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 10px 10px 0px 0px;
+}
+.draft-email-input {
+  padding: 10px 20px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.3);
+}
+.draft-email-to {
+  background-color: #b51a0e;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-family: "franklin-normal-300";
+  color: white;
+  margin-left: 10px;
+}
+.black {
+  color: black;
+}
+.email-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.draft-email-body {
+  min-height: 400px;
+  padding: 20px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: 0rem auto;
+  }
+}
+
+#laptopModal {
+
+}

@@ -1292,7 +1292,7 @@ listed below.
 - In a terminal, run `heroku login` and enter your Heroku credentials
 - From *your app* directory run `heroku create`
 - Run `heroku addons:create mongolab`.  This will set up the mLab add-on and configure the `MONGODB_URI` environment variable in your Heroku app for you.
-- Lastly, do `git push heroku master`.  Done! check
+- Lastly, do `git push heroku master`.  Done!
 
 **Note:** To install Heroku add-ons your account must be verified.
 

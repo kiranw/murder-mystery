@@ -13,7 +13,7 @@ a(data-toggle='modal' data-target='#laptopModal')
           .mock-browser
             .chrome-tabs(style='--tab-content-margin: 9px')
               .chrome-tabs-content
-                .chrome-tab
+                .chrome-tab(active='')#biotab
                   .chrome-tab-dividers
                   .chrome-tab-background
                     svg(version='1.1' xmlns='http://www.w3.org/2000/svg')
@@ -30,11 +30,11 @@ a(data-toggle='modal' data-target='#laptopModal')
                         svg(width='52%' height='100%' x='-100%' y='0')
                           use.chrome-tab-geometry(xlink:href='#chrome-tab-geometry-right' width='514' height='36')
                   .chrome-tab-content
-                    .chrome-tab-favicon(style="background-image: url('/img/google-favicon.ico')")
-                    .chrome-tab-title Google
+                    .chrome-tab-favicon(style="background-image: url('/img/generic-favicon.png')")
+                    .chrome-tab-title #{laptopbiotab}
                     .chrome-tab-drag-handle
                     .chrome-tab-close
-                .chrome-tab(active='')
+                .chrome-tab#gmailtab
                   .chrome-tab-dividers
                   .chrome-tab-background
                     svg(version='1.1' xmlns='http://www.w3.org/2000/svg')
@@ -51,8 +51,8 @@ a(data-toggle='modal' data-target='#laptopModal')
                         svg(width='52%' height='100%' x='-100%' y='0')
                           use.chrome-tab-geometry(xlink:href='#chrome-tab-geometry-right' width='214' height='36')
                   .chrome-tab-content
-                    .chrome-tab-favicon(style="background-image: url('/img/facebook-favicon.ico')")
-                    .chrome-tab-title Facebook
+                    .chrome-tab-favicon(style="background-image: url('/img/gmail-favicon.png')")
+                    .chrome-tab-title Gmail
                     .chrome-tab-drag-handle
                     .chrome-tab-close
               .chrome-tabs-bottom-bar
@@ -68,15 +68,20 @@ a(data-toggle='modal' data-target='#laptopModal')
                 transform: translate3d(239px, 0, 0)
                 }
             .chrome-tabs-optional-shadow-below-bottom-bar
-            .mock-browser-content
+            .mock-browser-content#gmailtab-content
               img(src='/img/inbox-bg.png').inbox-bg
               div.draft-email
                 .draft-email-header
                 .draft-email-input To 
                   span.draft-email-to #{laptopTo} &#10005;
-                .draft-email-input.black #{laptopSubject}
+                .draft-email-input.black
+                  span!= laptopSubject
                 .draft-email-body.black
-                  p!= laptopText
+                  span!= laptopText
                 img(src='/img/email-footer.png').email-footer
+            .mock-browser-content#biotab-content
+               .bio-reference scroll, click and play around
+               span.bio-title!= laptop2biotitle
+               span.bio-text!= laptop2biotext 
         script(src='https://unpkg.com/draggabilly@2.2.0/dist/draggabilly.pkgd.min.js')
         script(src='/js/chrome-tabs.js')

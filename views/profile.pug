@@ -22,7 +22,7 @@ html
       include partials/flash
       include partials/newspaper
 
-      a(href="/")
+      a(href="/pdfs/guestlist.pdf")
         img(src="/img/guest-list.png").guest-list.interactive
 
       a(href="/")
@@ -32,17 +32,21 @@ html
         a(data-toggle='modal' data-target='#phoneModal')
           img.phone.interactive(src='/img/phone.png')
         #phoneModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='phoneModalLabel' aria-hidden='true')
-          .modal-dialog(role='document')
+          .modal-dialog.modal-lg(role='document')
             .modal-content
               .modal-header
                 h5#phoneModalLabel.modal-title #{phoneTitle}
                 button.close(type='button' data-dismiss='modal' aria-label='Close')
                   span(aria-hidden='true') &times;
-              .modal-body #{phoneText}
-                hr
+              .modal-body 
                 audio(controls='', autoplay='')
-                  source(src=phoneUrl,type='audio/mp3')
+                  source(src='/recordings/'+phoneUrl,type='audio/mp3')
                   Your browser does not support the audio tag.
+                hr
+                | TRANSCRIPT
+                br
+                p!= phoneText
+                
       
       if (laptop)
         include partials/laptop

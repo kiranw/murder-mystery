@@ -267,7 +267,7 @@ div.header-0 > a:hover {
 .nav-link-static {
 }
 
-.nav-link:hover {
+.nav-link:hover, .secret {
   color: #fb5179;
 }
 
@@ -650,7 +650,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 }
 
 .modal-xlg {
-    max-width: 85% !important;
+    max-width: 80% !important;
     padding: 2vw;
     color: rgb(25,27,33);
 }
@@ -723,10 +723,11 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 
 .draft-email {
   width: 40%;
+  height: 90%;
   position: absolute;
   z-index:100;
-  bottom: 0;
-  right: 0;
+  bottom: 0px !important;
+  right: 0px;
   border-radius: 10px 10px 10px 10px;
   background-color: white;
   font-size: 0.9em;
@@ -736,36 +737,52 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 }
 
 .draft-email-header {
-  height: 2em;
+  height: 5%;
   background-color: rgba(0,0,0,0.8);
   border-radius: 10px 10px 0px 0px;
+  /*position: absolute;*/
 }
 .draft-email-input {
+  width: 100%;
   padding: 10px 20px;
   border-bottom: 0.5px solid rgba(0,0,0,0.3);
   color: rgba(0,0,0,0.3);
+  position: relative;
+  background-color: white;
+  display: grid;
 }
+
+.mock-browser-content {
+  min-height: 550px;
+}
+
 .draft-email-to {
-  background-color: #b51a0e;
-  border-radius: 15px;
-  padding: 5px 10px;
-  font-family: "franklin-normal-300";
-  color: white;
-  margin-left: 10px;
+    position: absolute;
+    background-color: #b51a0e;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-family: "franklin-normal-300";
+    color: white;
+    margin-left: 40px;
+    margin-top: 5px;
+    float: left;
 }
 .black {
   color: black;
 }
 .email-footer {
-  position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   height: auto;
+  position: absolute;
 }
 
 .draft-email-body {
-  min-height: 400px;
+  margin-top: 5%;
+  height: 73%;
   padding: 20px;
+  overflow-y: scroll;
+  padding-bottom: 100px;
 }
 
 @media (min-width: 576px) {
@@ -779,4 +796,82 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 
 }
 
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 1.3em;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+#biotab-content {
+  padding: 30px !important;
+  overflow-y: scroll;
+  max-height: 80vh;
+}
+
+.bio-reference {
+  font-style: italic;
+  color: rgba(0,0,0,0.5);
+  font-family: "franklin-normal-300"; 
+  margin-bottom: 1em;
+}
+
+.bio-title {
+  font-family: "franklin-normal-800";
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.bio-text{
+ font-family: "franklin-normal-300"; 
+}
 

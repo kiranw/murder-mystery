@@ -1,10 +1,12 @@
 /* eslint-env jquery, browser */
 $(document).ready(() => {
-
+  $("#gmailtab-content").hide();
   var el = document.querySelector('.chrome-tabs')
   var chromeTabs = new ChromeTabs()
   chromeTabs.init(el)
-  el.addEventListener('activeTabChange', ({ detail }) => console.log('Active tab changed', detail.tabEl))
+  el.addEventListener('activeTabChange', ({ detail }) => 
+    toggleTabs(detail.tabEl.id)
+  )
   // el.addEventListener('tabAdd', ({ detail }) => console.log('Tab added', detail.tabEl))
   el.addEventListener('tabRemove', ({ detail }) => console.log('Tab removed', detail.tabEl))
   document.querySelector('button[data-add-tab]').addEventListener('click', _ => {
@@ -43,3 +45,8 @@ $(document).ready(() => {
   })
 
 });
+
+function toggleTabs(activeid){
+  $(".mock-browser-content").hide();
+  $("#"+activeid+"-content").show();
+}

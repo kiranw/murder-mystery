@@ -34,6 +34,7 @@ exports.postLogin = (req, res, next) => {
     req.flash('errors', validationErrors);
     return res.redirect('/login');
   }
+  // req.body.email = req.body.email.replace(" ","");
   // req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false });
 
   passport.authenticate('local', (err, user, info) => {

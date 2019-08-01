@@ -10,6 +10,6 @@
             // a.nav-link(href='/login') Login
         else
           li.nav-item
-            a.nav-link.nav-link-static Welcome, #{user.email}
+            a.nav-link.nav-link-static Welcome, #{user.email.replace(/([A-Z])/g, ' $1').trim()}
           li.nav-item(class=(title === 'Logout') ? 'active' : undefined)
             a.nav-link(href='/logout') Logout

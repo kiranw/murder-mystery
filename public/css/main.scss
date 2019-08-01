@@ -281,6 +281,15 @@ div.header-0 > a:hover {
   margin-top: 2em;
 }
 
+.login-btn-active {
+  drop-shadow: none;
+  border: 2px #d82d55 solid;
+  color: #d82d55;
+  margin: 0 auto;
+  display: table;
+  margin-top: 2em;
+  background-color: #f6f5ea;
+}
 .generic-btn {
   drop-shadow: none;
   background-color: transparent;
@@ -290,7 +299,7 @@ div.header-0 > a:hover {
   margin-top: 2em;
 }
 
-.generic-btn:hover, .login-btn:hover {
+.generic-btn:hover, .login-btn:hover{
   background-color: #d82d55;
   color: #f6f5ea;
 }

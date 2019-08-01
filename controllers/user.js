@@ -27,14 +27,14 @@ exports.getLogin = (req, res) => {
  */
 exports.postLogin = (req, res, next) => {
   const validationErrors = [];
-  if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' });
+  // if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' });
   if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Password cannot be blank.' });
 
   if (validationErrors.length) {
     req.flash('errors', validationErrors);
     return res.redirect('/login');
   }
-  req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false });
+  // req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false });
 
   passport.authenticate('local', (err, user, info) => {
     if (err) { return next(err); }
@@ -100,7 +100,7 @@ exports.postSignup = (req, res, next) => {
   User.findOne({ email: req.body.email }, (err, existingUser) => {
     if (err) { return next(err); }
     if (existingUser) {
-      req.flash('errors', { msg: 'Account with that email address already exists.' });
+      req.flash('errors', { msg: 'Account with that name already exists.' });
       return res.redirect('/signup');
     }
     user.save((err) => {
@@ -131,7 +131,7 @@ exports.getAccount = (req, res) => {
  */
 exports.postUpdateProfile = (req, res, next) => {
   const validationErrors = [];
-  if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' });
+  // if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' });
 
   if (validationErrors.length) {
     req.flash('errors', validationErrors);
@@ -149,7 +149,7 @@ exports.postUpdateProfile = (req, res, next) => {
     user.save((err) => {
       if (err) {
         if (err.code === 11000) {
-          req.flash('errors', { msg: 'The email address you have entered is already associated with an account.' });
+          req.flash('errors', { msg: 'The name you have entered is already associated with an account.' });
           return res.redirect('/account');
         }
         return next(err);

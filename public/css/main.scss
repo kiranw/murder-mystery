@@ -255,6 +255,15 @@ body {
   margin: 10px;
 }
 
+div.header-0 > a {
+  color: #d82d55;
+}
+
+div.header-0 > a:hover {
+  color: #fb5179;
+}
+
+
 .nav-link-static {
 }
 
@@ -769,3 +778,5 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 #laptopModal {
 
 }
+
+

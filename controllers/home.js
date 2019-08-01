@@ -85,8 +85,25 @@ exports.getProfile = (req, res) => {
     laptopbiotab = "The Association of Muslim-American Lawyers";
     laptop2biotext = "<br><br><div class='bio-title'><strong class='secret'>Background</strong> Story & Profile of Habeeba Nawaz, January 2019</div><p>Habeeba Nawaz is a young legal mind, currently serving as the family lawyer for billionaire Christopher Agatha. She was selected for the position eight years ago, in 2011. Before that, she was an associate specializing in appellate litigation at Kirkland & Ellis, and a Harvard Law School Class of 2007 alumnus.</p><p>Nawaz's is a story familiar to many of us. She was raised by Pakistani immigrants, who spent long hours working at low-paying restaurant jobs to provide for their family. And Nawaz, ever the diligent daughter, committed herself to her studies in return. As we have often discussed, Muslim-American lawyers face significant bigotry. Americans regularly make ignorant claims like \"sharia is incompatible with the Constition\" while refusing us opportunities. That's why it's particularly notable that Nawaz has worked as the personal family lawyer to one of America's wealthiest and most prominent families, overseeing a vast range of legal issues, from philanthropic to corporate to personal.</p><p>In her own words, Habeeba is introverted and thoughtful, but values meaningful relationships. If anyone is interested in reaching out to her to learn from her experiences, please let us know, and we'll put you in touch.</p>";
   }
-
+  if (req.user.email == "lindsay") {
+    laptop = true;
+    laptopTo = "Me";
+    laptopText = "<p>Okay... this is a little scary. I mean, I always knew that writing my most recent book might offend Christopher or Carter for their work with the Foundation, and it sounds like he's been digging into my past as a result. </p><p>But if he found out about what I did... that I forged a lot of the data he's asking for... that could be really bad. I mean, it's important to inspire people, and no one would've liked to see a null result on how activism can change social conservatives to social progressives! And honestly, the paper, forged data and all, probably did some real good for the world.</p><p>But in any case, I didn't expect it to be the hit it became, and since I got offered the professorship and tenure based off of its influence, I obviously can't have the world finding out that the result isn't real. I've been too careful about maintaining academic rigor since to have all that progress jeopardized. But if Agatha knows.... that makes me worried. Would he fire me? Would he tell people about it? </p><p>Or maybe he doesn't know. Ugh. Guess I'll just bring the data he's asking for... hopefully he hasn't figured it out.<span class='blinking-cursor'>|</span></p><br><strong>From:</strong> Christopher Agatha<br><strong>To:</strong> Lindsay McGovey<br><strong>Subject:</strong> Personal check-in<br><br>Hi Lindsay,<br><br><p>I'm excited that you'll be able to attend my retirement celebration party.</p><p>This may seem like an odd request, but I'm interested in the results of your earlier papers on LGBT rights -- could you bring some of the raw survey data you collected then? Would like to discuss after the party.</p><br>Thanks,<br>Christopher";
+    laptopSubject = "<strong class='secret'>Secret</strong> Personal Email Draft";
+    laptop2biotitle = "<h2>Agatha College Sociology Department</h2>";
+    laptopbiotab = "Agatha College Sociology Department";
+    laptop2biotext = "<br><br><div class='bio-title'>Lindsay McGovey <strong class='secret'>Background</strong> and CV</div><br><p>Professor McGovey is one of our youngest department faculty members. An Agatha Fellow ('04), she pursued a PhD in Sociology afterward, conducting groundbreaking research into popular opinion formation on core social issues, including LGBT rights and abortion. Following the publication of that paper series, we hired her to join our staff.</p><p>She currently teaches classes including SOC 1112: Men, Women, and Work; and SOC 2314: Philanthropy and Nonprofit Organizations. Her second class has exploded in popularity, especially after the recent publication of her latest book on billionaire-sponsored philanthropic organizations, and their limited effectiveness due to their poor leadership, over-interventionism, and lack of sustained engagement. She was recently invited to share those findings at large conferences, including Davos, where her book sparked significant discussion.</p><p>A popular professor, McGovey has started to work in administration as well, partnering closely with Dean Stern and his wife, Professor Rebecca Franklin (Nobel laureate '98), on a number of campus initiatives around mental health.</p>";
+  }
   if (req.user.email == "test@test.com") {
+    // laptop = true;
+    // laptopTo = "Me";
+    // laptopText = "<span class='blinking-cursor'>|</span><br><strong>From:</strong> Christopher Agatha<br><strong>To:</strong>Habeeba Nawwaz<br><strong>Subject:</strong>Personal check-in<br>";
+    // laptopSubject = "<strong class='secret'>Secret</strong> Personal Email Draft";
+    // laptop2biotitle = "<h2></h2>";
+    // laptopbiotab = "";
+    // laptop2biotext = "<br><br><div class='bio-title'><strong class='secret'>Background</strong></div>";
+
+
   	// laptop = true;
    //  laptopTo = "Me";
    //  laptopText = "Text";
@@ -102,8 +119,8 @@ exports.getProfile = (req, res) => {
     // diaryDate = "1/20/19"
     // diaryText = "Dear Diary,<br><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p><p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of(The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, </p>";
 
-    folder = true;
-    folderUrl = "/pdfs/christie_8_2.pdf";
+    // folder = true;
+    // folderUrl = "/pdfs/christie_8_2.pdf";
   }
   res.render('profile', {
     title: 'My Profile',

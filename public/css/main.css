@@ -13406,8 +13406,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
   color: #191b21; }
 
 .modal-xlg {
-  max-width: 80% !important;
-  padding: 2vw;
+  max-width: 100% !important;
+  /*padding: 2vw;*/
   color: #191b21; }
 
 .modal-body, .modal-header {
@@ -13464,8 +13464,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 
 .draft-email {
   width: 40%;
-  height: 90%;
-  position: absolute;
+  margin-bottom: 0px;
+  position: fixed;
   z-index: 100;
   bottom: 0px !important;
   right: 0px;
@@ -13477,10 +13477,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
   box-shadow: 0 0 5px #ccc, inset 0 0 0 #000; }
 
 .draft-email-header {
-  height: 5%;
+  display: grid;
+  position: relative;
+  height: 30px;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px 10px 0px 0px;
-  /*position: absolute;*/ }
+  border-radius: 10px 10px 0px 0px; }
 
 .draft-email-input {
   width: 100%;
@@ -13492,7 +13494,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
   display: grid; }
 
 .mock-browser-content {
-  min-height: 550px; }
+  min-height: 650px; }
 
 .draft-email-to {
   position: absolute;
@@ -13514,11 +13516,17 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
   height: auto;
   position: absolute; }
 
-.draft-email-body {
-  margin-top: 5%;
-  height: 73%;
+.draft-email-body-container {
+  margin-top: 0;
   padding: 20px;
-  overflow-y: scroll;
+  overflow: hidden;
+  padding-bottom: 100px;
+  position: relative;
+  height: 500px; }
+
+.draft-email-body {
+  overflow: auto;
+  height: 100%;
   padding-bottom: 100px; }
 
 @media (min-width: 576px) {
@@ -13569,7 +13577,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 #biotab-content {
   padding: 30px !important;
   overflow-y: scroll;
-  max-height: 80vh; }
+  max-height: 100vh; }
 
 .bio-reference {
   font-style: italic;

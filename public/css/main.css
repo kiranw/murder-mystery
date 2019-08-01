@@ -13586,7 +13586,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {}*/
 #biotab-content {
   padding: 30px !important;
   overflow-y: scroll;
-  max-height: 100vh; }
+  height: 99vh; }
 
 .bio-reference {
   font-style: italic;

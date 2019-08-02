@@ -12,6 +12,19 @@ exports.index = (req, res) => {
 };
 
 
+
+/**
+ * GET /
+ * Home page.
+ */
+exports.getWhatis = (req, res) => {
+  res.render('whatis', {
+    title: 'What Is',
+    user: req.user
+  });
+};
+
+
 /**
  * GET /
  * Profile page

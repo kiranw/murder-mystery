@@ -121,7 +121,13 @@ exports.getProfile = (req, res) => {
     laptop2biotext = "<br><br><div class='bio-title'><strong class='secret'>Background</strong>: Robert Godfried</div><p><strong>Robert Godfried</p><p><strong><strong>Career</strong>: Tennis Prodigy</p><p><strong><strong>Identifiable Traits</strong>: Dark Hair, Brown Eyes, Minor Recovering Injuries (hip and left leg)</p><p><strong><strong>Personality</strong>: Shy but talkative once engaged</p><p><strong><strong>Age</strong>: 32</p>Robert Godfried started his tennis career at age 5 and established himself as a tennis prodigy upon his start. Though he is a professional tennis player, his ranking as the World #58 player has offered him some anonymity. However, there are certainly avid fans who follow <p>Godfried’s professional career.</p>Because of a recent injury, Godfried is known to stretch around every 20 minutes. Avid fans know this quirk of his, and discuss it on online <p>community forums. Some gala attendees may know this of Godfried and expect the same.</p><p>In general, Godfried is shy but will gradually become talkative once engaged in conversation. </p>Because of Godfried’s minor fame, he is seeking to transition his maturing career as a professional tennis player and move towards entrepreneurship and small business. In particular, Godfried wants to secure a brand ambassador partnership with supermodel Gabriel Weber’s <p>new supplement company, Weber Health. </p><p><br><br><strong>Additional Context</strong>:</p>Godfried’s invitation to the gala is largely due to his professional success and association with the Agatha Fellowship. Robert was an Agatha <p>Fellow (‘09) who obtained an accelerated track to a business professional career through his network from the program.</p><br><br><br>";
   }
   if (req.user.email == "diana") {
-    
+    // laptop = true;
+    // laptopTo = "Me";
+    // laptopText = "<span class='blinking-cursor'>|</span><br><strong>From:</strong> Christopher Agatha<br><strong>To:</strong>Habeeba Nawwaz<br><strong>Subject:</strong>Personal check-in<br>";
+    // laptopSubject = "<strong class='secret'>Secret</strong> Personal Email Draft";
+    // laptop2biotitle = "<h2></h2>";
+    // laptopbiotab = "";
+    // laptop2biotext = "<br><br><div class='bio-title'><strong class='secret'>Background</strong></div>";
   }
   if (req.user.email == "peter") {
     laptop = true;
@@ -136,7 +142,8 @@ exports.getProfile = (req, res) => {
     
   }
   if (req.user.email == "gabriel") {
-    
+    folder = true;
+    folderUrl = "/pdfs/weberarchive.pdf";
   }
   if (req.user.email == "test@test.com") {
     // laptop = true;

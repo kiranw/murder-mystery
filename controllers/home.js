@@ -111,7 +111,7 @@ exports.getProfile = (req, res) => {
     laptopbiotab = "New York Chronicle | Bios";
     laptop2biotext = "<br><br><div class='bio-title'>Amelia Bernstein</div><br><br><p>Amelia Bernstein is the lead Editor of our News department. Her role covers a wide range of activities, from directly reporting on major news stories, to assigning articles to her staff of journalists. Within the field of journalism more broadly, Amelia is widely respected as one of the most prominent female leaders.</p><p>Earlier in her career, Amelia was an Agatha Fellow. After graduating from the College, she joined the New York Chronicle as a staff journalist, breaking major news including the Oxxon oil spill in 2014. Afterward, she served as our chief Washington correspondent, and received significant praise for her coverage of the 2016 election.</p><p>Many of our staff members describe Amelia as tough -- she is not afraid to ask important questions or speak truth to power. However, they also describe her as caring, and particularly motivated to mentor younger women.</p><p>In her personal life, Amelia is married to Harold Beech, the chief surgeon at Medici Hospitals. As the first two Agatha Fellows, they met during their time in college, and were married soon after graduation.</p>";
   }
-  if (req.user.email == "peter") {
+  if (req.user.email == "robert") {
     laptop = true;
     laptopTo = "Me";
     laptopText = "I'm on it.<span class='blinking-cursor'>|</span><br><br><br><strong>From:</strong> Chief Alexander Marple (FBI/CED FED)<br><strong>To:</strong> Agent M. Scott (FBI/CES FED)<br><strong>Subject:</strong> Letter from the Chief (Top Secret Classified)<br><p>CASE 901</p><br><p>Special Agent M. Scott, </p><p>We've received credible information that an attempt may be made on Christopher Agatha’s life, during his retirement gala tomorrow evening. Your next assignment will be to attend undercover as an invited guest and identify the suspect. </p><p>Robert Godfried, one of our contacts and an invited guest, has agreed to offer his invitation to the bureau in exchange for a few minor favors. You will take his place, undercover. Robert has attested that no one on the invitation list has met him in person.</p><p>You should see a separate tab open on your device with Robert’s background. Refer to this to orient yourself to your identity for the evening.</p><p>While your primary goal is to ensure public safety and investigate, please remember that the bureau must remain in Robert’s good graces. Robert is getting older, and is seeking a transition out of his professional tennis career. His primary goal for the gala was to network and establish a partnership with Gabriel Weber’s new company to serve as a brand ambassador. Secure this partnership in his place. Please note that it may be best to keep this conversation with Weber secret from other attendees for now.</p><p>In the event of a disturbance, note that other small crimes of opportunity may arise, such as robbery or vandalism. Stay vigilant for the estate, in addition to your other goals.</p><p>Alexander Marple</p><p>FBI Bureau Chief</p>";
@@ -123,7 +123,7 @@ exports.getProfile = (req, res) => {
   if (req.user.email == "diana") {
     
   }
-  if (req.user.email == "robert") {
+  if (req.user.email == "peter") {
     
   }
   if (req.user.email == "suzanne") {

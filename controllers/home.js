@@ -102,6 +102,36 @@ exports.getProfile = (req, res) => {
     folder = true;
     folderUrl = "/pdfs/haroldBeechFolder.pdf";
   }
+  if (req.user.email == "amelia") {
+    laptop = true;
+    laptopTo = "Me";
+    laptopText = "<p>1. Talk to Harold about his work: some board election at Agatha Pharmaceuticals? Could change direction of company... need to ensure Picasso robot does not go into market, because it could take Harold's job away. Honestly it's very frustrating he doesn't seem to care as much as me -- if he loses his job, we'll lose face! I've only made it this far because of image.</p><p>2. Finalize set of questions for the different attendees at the dinner. Not sure there will be enough interesting material for another article after the dinner, but there may always be some juicy insider information about the companies, etc.</p><p>3. Staff journalists sent me some list of names recently detained by immigration enforcement. Pretty long list, looks like they're ramping up. Did notice that two people, last name Nawaz, recently deported from upstate NY? Not sure if relatives of Nawaz on the invite list? <span class='blinking-cursor'>|</span></p><br>";
+    laptopSubject = "Personal TODO (<strong class='secret'>Secret</strong>)";
+    laptop2biotitle = "<h2>New York Chronicle Profile & <strong class='secret'>Background</strong></h2>";
+    laptopbiotab = "New York Chronicle | Bios";
+    laptop2biotext = "<br><br><div class='bio-title'>Amelia Bernstein</div><br><br><p>Amelia Bernstein is the lead Editor of our News department. Her role covers a wide range of activities, from directly reporting on major news stories, to assigning articles to her staff of journalists. Within the field of journalism more broadly, Amelia is widely respected as one of the most prominent female leaders.</p><p>Earlier in her career, Amelia was an Agatha Fellow. After graduating from the College, she joined the New York Chronicle as a staff journalist, breaking major news including the Oxxon oil spill in 2014. Afterward, she served as our chief Washington correspondent, and received significant praise for her coverage of the 2016 election.</p><p>Many of our staff members describe Amelia as tough -- she is not afraid to ask important questions or speak truth to power. However, they also describe her as caring, and particularly motivated to mentor younger women.</p><p>In her personal life, Amelia is married to Harold Beech, the chief surgeon at Medici Hospitals. As the first two Agatha Fellows, they met during their time in college, and were married soon after graduation.</p>";
+  }
+  if (req.user.email == "peter") {
+    laptop = true;
+    laptopTo = "Me";
+    laptopText = "I'm on it.<span class='blinking-cursor'>|</span><br><br><br><strong>From:</strong> Chief Alexander Marple (FBI/CED FED)<br><strong>To:</strong> Agent M. Scott (FBI/CES FED)<br><strong>Subject:</strong> Letter from the Chief (Top Secret Classified)<br><p>CASE 901</p><br><p>Special Agent M. Scott, </p><p>We've received credible information that an attempt may be made on Christopher Agatha’s life, during his retirement gala tomorrow evening. Your next assignment will be to attend undercover as an invited guest and identify the suspect. </p><p>Robert Godfried, one of our contacts and an invited guest, has agreed to offer his invitation to the bureau in exchange for a few minor favors. You will take his place, undercover. Robert has attested that no one on the invitation list has met him in person.</p><p>You should see a separate tab open on your device with Robert’s background. Refer to this to orient yourself to your identity for the evening.</p><p>While your primary goal is to ensure public safety and investigate, please remember that the bureau must remain in Robert’s good graces. Robert is getting older, and is seeking a transition out of his professional tennis career. His primary goal for the gala was to network and establish a partnership with Gabriel Weber’s new company to serve as a brand ambassador. Secure this partnership in his place. Please note that it may be best to keep this conversation with Weber secret from other attendees for now.</p><p>In the event of a disturbance, note that other small crimes of opportunity may arise, such as robbery or vandalism. Stay vigilant for the estate, in addition to your other goals.</p><p>Alexander Marple</p><p>FBI Bureau Chief</p>";
+    laptopSubject = "Re: Letter from the Chief (Top <strong class='secret'>Secret</strong> Classified)";
+    laptop2biotitle = "<h2>FBI Contact Archive - Case 901</h2>";
+    laptopbiotab = "FBI Contact Archive - Case 901";
+    laptop2biotext = "<br><br><div class='bio-title'><strong class='secret'>Background</strong>: Robert Godfried</div><p><strong>Robert Godfried</p><p><strong><strong>Career</strong>: Tennis Prodigy</p><p><strong><strong>Identifiable Traits</strong>: Dark Hair, Brown Eyes, Minor Recovering Injuries (hip and left leg)</p><p><strong><strong>Personality</strong>: Shy but talkative once engaged</p><p><strong><strong>Age</strong>: 32</p>Robert Godfried started his tennis career at age 5 and established himself as a tennis prodigy upon his start. Though he is a professional tennis player, his ranking as the World #58 player has offered him some anonymity. However, there are certainly avid fans who follow <p>Godfried’s professional career.</p>Because of a recent injury, Godfried is known to stretch around every 20 minutes. Avid fans know this quirk of his, and discuss it on online <p>community forums. Some gala attendees may know this of Godfried and expect the same.</p><p>In general, Godfried is shy but will gradually become talkative once engaged in conversation. </p>Because of Godfried’s minor fame, he is seeking to transition his maturing career as a professional tennis player and move towards entrepreneurship and small business. In particular, Godfried wants to secure a brand ambassador partnership with supermodel Gabriel Weber’s <p>new supplement company, Weber Health. </p><p><br><br><strong>Additional Context</strong>:</p>Godfried’s invitation to the gala is largely due to his professional success and association with the Agatha Fellowship. Robert was an Agatha <p>Fellow (‘09) who obtained an accelerated track to a business professional career through his network from the program.</p><br><br><br>";
+  }
+  if (req.user.email == "diana") {
+    
+  }
+  if (req.user.email == "robert") {
+    
+  }
+  if (req.user.email == "suzanne") {
+    
+  }
+  if (req.user.email == "gabriel") {
+    
+  }
   if (req.user.email == "test@test.com") {
     // laptop = true;
     // laptopTo = "Me";

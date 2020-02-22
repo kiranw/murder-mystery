@@ -34,6 +34,7 @@ exports.getProfile = (req, res) => {
   laptop = false;
   diary = false;
   folder = false;
+  gameManual = false;
   phoneTitle = "";
   phoneText = "";
   phoneUrl = "";
@@ -52,6 +53,9 @@ exports.getProfile = (req, res) => {
     res.render('account/login', {
       title: "Login",
     });
+  }
+  if (req.user.email == "christopher" | req.user.email == "jane") {
+    gameManual = true
   }
   if (req.user.email == "felicity") {
     phone = true;
@@ -208,6 +212,7 @@ exports.getProfile = (req, res) => {
     diaryText: diaryText,
     diaryDate: diaryDate,
     folder: folder,
-    folderUrl: folderUrl
+    folderUrl: folderUrl,
+    gameManual: gameManual
   });
 };
